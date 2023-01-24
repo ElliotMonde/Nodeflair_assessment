@@ -36,3 +36,86 @@
     transform: rotate(360deg);
   }
 }
+
+.jobListingCard {
+  width: 417px;
+  height: 159.8px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.jobListingCardTopInformation{
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.cardTopDiv{
+  display: flex;
+  width: inherit;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+
+}
+.card:hover {
+  padding: 0px 5px auto 5px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card:focus {
+  border: 1px solid #1FC76A;
+}
+.companyLogoDiv{
+  width: 45px;
+  height: 45px;
+  margin: 0px;
+  padding: 10px;
+  flex: 1;
+}
+
+.companyLogoImg{
+  max-width: 100%;
+}
+
+.companyInfoDiv{
+  flex: 9;
+}
+.jobType{
+  flex: 1;
+}
+.companyInfoPara{
+  margin: 0px 0px 2px 0px;
+}
+.companyNameSpan, .jobTimeLocation {
+  font-size: 14px;
+}
+.jobTimeLocation{
+    padding: 0px 55px;
+    display: flex;
+    flex: row;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+.timePosted{
+  font-weight: bold;
+  color: #1FC76A;
+}
+.jobName{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.jobLocation{
+  flex: 1
+}
+.jobTagStyle{
+    border: hidden;
+    border-radius: 7px;
+    color: #838383;
+    background-color: #F1F1F1;
+    padding: 5px 8px;
+    font-family: 'Roboto Mono', Consolas, monospace;
+    font-size: 14px;
+}
