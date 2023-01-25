@@ -4,22 +4,21 @@ import PlaceIcon from '@mui/icons-material/Place';
 
 export default function JobListingCardTopInformation(props) {
     return (
-        <Box className="jobListingCardTopInformation">
-            <Grid container="true">
-                <Grid item="true" className="cardTopDiv">
+            <Grid container className="jobListingCardTopInformation">
+                <Grid item className="cardTopDiv">
                     <div className="companyLogoDiv">
-                        <img className="companyLogoImg"  src={props.logo} alt="company logo"/>
+                        <img className="companyLogoImg" src={props.logo} alt="company logo" />
                     </div>
                     <div className="companyInfoDiv">
                         <p className="companyInfoPara">
-                        <span className="companyNameSpan">
+                            <span className="companyNameSpan">
                                 {props.companyName}
-                        </span>
-                        <span>
+                            </span>
+                            <span>
                                 &nbsp;&nbsp;&nbsp;
                                 {props.rating}
                                 &nbsp;★
-                        </span>
+                            </span>
                         </p>
                         <h2 className="jobName">{props.jobName}</h2>
                     </div>
@@ -28,13 +27,13 @@ export default function JobListingCardTopInformation(props) {
                     </div>
                 </Grid>
                 <Grid className="cardBtmDiv">
-                    <div className = "jobTimeLocation">
+                    <div className="jobTimeLocation">
                         <span className="timePosted">
                             {props.timePosted}
                         </span>
                         <div className="jobLocation">
                             <span>
-                                <PlaceIcon color="disabled" className="placeIcon"/>
+                                <PlaceIcon sx={{ color: "#838383", fontSize: "16px" }} className="placeIcon" />
                             </span>
                             <span>
                                 {props.jobLocation}
@@ -42,17 +41,18 @@ export default function JobListingCardTopInformation(props) {
                         </div>
                     </div>
                     <div className="jobSalary">
-                        <p>
-                            <span className="salaryInfo">
-                                {props.salary.length > 0 ? `${props.salary[0]} - ${props.salary[1]}/mth` : null} - 
-                            </span>
-                            <span className="estSalaryTag">
-                                EST
-                            </span>
-                        </p>
+                        {props.salary.length > 0 ?
+                            <p className="salaryPara">
+                                <span className="salaryInfo">
+                                    {`${props.salary[0]} - ${props.salary[1]} / mth`}
+                                </span>
+                                <span className="estSalaryTag">
+                                    EST
+                                </span>
+                            </p>
+                            : null}
                     </div>
                 </Grid>
             </Grid>
-        </Box>
     )
 }

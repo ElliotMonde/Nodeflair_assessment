@@ -36,29 +36,47 @@
     transform: rotate(360deg);
   }
 }
-
+body{
+  background: #f1f1f1;
+  padding: 15px 15px;
+}
+.cardContainer{
+  width: fit-content;
+  height: auto;
+  overflow-y: scroll;
+}
 .jobListingCard {
   width: 417px;
-  height: 159.8px;
+  height: fit-content;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
-  border-radius: 7px;
-  padding: 5px;
+  padding: 15px 5px;
 }
 
-.jobListingCardTopInformation{
-    width: 100%;
-    border-bottom: 1px solid #f1f1f1;
+.jobListingCardTopInformation {
+  width: 100%;
+  max-height: fit-content;
+  padding: 20px;
+}
+.jobListingCardTopInformation::after{ /* horizontal line */
+  content: "";
+  display: block;
+  position: relative;
+  top: 15px;
+  width: 100%;
+  border-bottom: 2px solid #f1f1f1;
+  margin: 0px 0px;
+  padding: 0px;
 }
 
-.cardTopDiv{
+.cardTopDiv {
   display: flex;
   width: inherit;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: flex-start;
   text-align: left;
-
+  margin: 0px 0px 2px;
 }
 .card:hover {
   padding: 0px 5px auto 5px;
@@ -66,56 +84,117 @@
 }
 
 .card:focus {
-  border: 1px solid #1FC76A;
+  border: 1px solid #1fc76a;
 }
-.companyLogoDiv{
-  width: 45px;
-  height: 45px;
+.companyLogoDiv {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 45px;
+  max-height: 45px;
   margin: 0px;
-  padding: 10px;
-  flex: 1;
+  padding: 0px 10px 0px 0px;
+  flex: 2;
+  overflow: hidden;
 }
 
-.companyLogoImg{
-  max-width: 100%;
+.companyLogoImg {
+  width: 45px;
+  height: auto;
+  margin: auto 0px;
+  border-radius: 7px;
 }
 
-.companyInfoDiv{
+.companyInfoDiv {
   flex: 9;
 }
-.jobType{
+.jobType {
   flex: 1;
+  max-width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
+  background: #ddf7e9;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1fc76a;
+  padding: 5px 8px;
+  margin: 0px 0px 0px 10px;
+  border-radius: 7px;
 }
-.companyInfoPara{
+.companyInfoPara {
   margin: 0px 0px 2px 0px;
 }
-.companyNameSpan, .jobTimeLocation {
+.companyNameSpan {
   font-size: 14px;
 }
-.jobTimeLocation{
-    padding: 0px 55px;
-    display: flex;
-    flex: row;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    width: 100%;
+.cardBtmDiv {
+  padding: 0px 0px 0px 55px;
 }
-.timePosted{
+.jobTimeLocation {
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  align-items: center;
+}
+.timePosted {
   font-weight: bold;
-  color: #1FC76A;
+  color: #1fc76a;
+  padding: 0px 15px 6px 0px;
 }
-.jobName{
+.jobName {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
+  margin: 0px 0px 2px;
 }
-.jobLocation{
-  flex: 1
+.jobLocation {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #838383;
 }
-.jobTagStyle{
-    border: hidden;
-    border-radius: 7px;
-    color: #838383;
-    background-color: #F1F1F1;
-    padding: 5px 8px;
-    font-family: 'Roboto Mono', Consolas, monospace;
-    font-size: 14px;
+.salaryPara {
+  padding: 0px;
+  margin: 0px 0px 2px 0px;
+}
+.salaryInfo {
+  padding: 0px 10px 0px 0px;
+}
+.estSalaryTag {
+  background: #f1f1f1;
+  padding: 3px 7px;
+  border-radius: 7px;
+}
+.jobListingCardBottomInformation {
+  display: flex;
+  flex-wrap: nowrap;
+  max-height: 31px;
+  max-width: 417px;
+  padding: 0px 15px 0px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jobTagPara{
+  display: block;
+  width: inherit;
+  padding: 5px;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jobTagStyle {
+  display: inline-block;
+  border: hidden;
+  border-radius: 7px;
+  width: fit-content;
+  white-space: nowrap;
+  color: #838383;
+  background-color: #f1f1f1;
+  padding: 5px 8px;
+  margin: 0px 0px 0px 2px;
+  font-family: "Roboto Mono", Consolas, monospace;
+  font-size: 14px;
+  font-weight: bold;
 }

@@ -1,8 +1,19 @@
 import JobTag from "./JobTag";
-export default function JobListingCardBottomInformation({ job }) {
-  return (
-    <div className="jobListingCardBottomInformation">
-        <JobTag />
-    </div>
-  )
+
+export default function JobListingCardBottomInformation(props) {
+    return (
+        <div className="jobListingCardBottomInformation">
+            <p className="jobTagPara">
+                {props.jobTag.map((tag) => {
+                    return (
+                        
+                        <JobTag
+                            key={props.jobTag.indexOf(tag)}
+                            JobTag={tag}
+                        />
+                    )
+                })}
+            </p>    
+        </div>
+    )
 }

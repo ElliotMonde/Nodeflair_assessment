@@ -7,10 +7,12 @@ import JobListingCardBottomInformation from "./JobListingCardBottomInformation";
 export default function JobListingCard(props) {
 
     return (
-        <Grid item>
-            <Card className="jobListingCard" variant="elevation">
-
+        <Grid className="cardGrid" item>
+            <Card className="jobListingCard" variant="outlined" sx={{borderRadius: "10px"}}>
+                <Grid container>
                 <JobListingCardTopInformation
+                    item
+                    xs={8}
                     logo={props.logo}
                     companyName={props.companyName}
                     rating={props.rating}
@@ -20,7 +22,8 @@ export default function JobListingCard(props) {
                     jobLocation={props.jobLocation}
                     salary={props.salary}
                 />
-                <JobListingCardBottomInformation />
+                <JobListingCardBottomInformation item xs={4}  jobTag={props.jobTags}/>
+                </Grid>
             </Card>
         </Grid>
     )
