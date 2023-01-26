@@ -48,16 +48,15 @@ body {
 }
 /* styling of left side job listing card and container */
 .cardGrid {
-
   width: inherit;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 0px 5px 0px;
   margin: 0;
 }
 
-.cardGrid:hover{
-  padding: 5px 0px 0px 0px;
+.cardGrid:hover {
+  padding: 5px 0px 15px 0px;
 }
-.cardContainerBox{
+.cardContainerBox {
   flex: 3;
 }
 
@@ -73,9 +72,9 @@ body {
   background-color: #ffffff;
   padding: 0px 5px 10px 5px;
 }
-.jobListingCard:hover{
+.jobListingCard:hover {
   margin: 0px 0px;
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.2);
 }
 .jobListingCardTopInformation {
   width: 100%;
@@ -103,14 +102,10 @@ body {
   text-align: left;
   margin: 0px 0px 2px;
 }
-/* .jobListingCard:hover {
-  padding: 0px 5px auto 5px;
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
-}
 
-.jobListingCard:focus {
-  border: 1px solid #1fc76a;
-} */
+.cardOnFocus {
+  border: 3px solid #1fc76a;
+}
 .companyLogoDiv {
   display: flex;
   flex-wrap: nowrap;
@@ -226,33 +221,40 @@ body {
 }
 
 /* styling for right side container of detailed job information */
-.jobDetailsContainer{
+.jobDetailsContainer {
   display: block;
   flex: 9;
   height: auto;
   margin: 15px 10px;
   padding: 29px 20px;
   border-radius: 10px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.jobDescriptionDiv {
+  text-align: left;
 }
 
 /* small screens */
 @media screen and (max-width: 1010px) {
-  .App{
+  .App {
     flex-direction: column;
   }
   .jobListingCard {
+    display: block;
     width: 100%;
     height: fit-content;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
     padding: 0px 5px 10px 5px;
+    border: 1px solid #f1f1f1;
+    border-radius: 20px;
   }
-  .cardContainerBox{
+  .cardContainerBox {
     flex: 1;
   }
-  .jobDetailsContainer, .detailedJobTitle{
+  .jobDetailsContainer,
+  .detailedJobTitle {
     display: none;
     visibility: hidden;
   }

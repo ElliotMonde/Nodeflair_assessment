@@ -9,8 +9,10 @@ import jobs from "../../jobInformation"
 function JobListingCardContainer(props) {
     const [currFocus, setCurrFocus] = useState(0);
     function SetCardFocus(key) {
+        document.getElementsByClassName("jobListingCard")[currFocus].classList.remove("cardOnFocus");
+        document.getElementsByClassName("jobListingCard")[key].classList.add("cardOnFocus");
         setCurrFocus(key);
-        props.whenClicked(currFocus);
+        props.whenClicked(key);
         console.log(currFocus);
     }
 

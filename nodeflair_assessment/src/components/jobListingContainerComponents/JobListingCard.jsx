@@ -8,18 +8,13 @@ export default function JobListingCard(props) {
 
     return (
         <Grid className="cardGrid" item>
-            <Card className="jobListingCard" variant="outlined" sx={{
-                borderRadius: "10px",
-                // add this to the statehook when it is in focus
-                "&:focus": {
-                    border: "1px solid #1fc76a",
-                }
-            }} >
+            
                 <div className="cardLink" onClick={props.whenClicked} overlay sx={{ textDecoration: "none", color: "#000" }} >
+                <Card className="jobListingCard" sx={{borderRadius:"10px"}}>
                     <Grid container>
                         <JobListingCardTopInformation
                             item
-                            
+
                             logo={props.logo}
                             companyName={props.companyName}
                             rating={props.rating}
@@ -31,8 +26,8 @@ export default function JobListingCard(props) {
                         />
                         <JobListingCardBottomInformation item jobTag={props.jobTags} />
                     </Grid>
+                </Card>
                 </div>
-            </Card>
         </Grid >
     )
 }
