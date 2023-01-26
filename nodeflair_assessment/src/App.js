@@ -1,10 +1,17 @@
+import React, { useState } from 'react';
 import './App.css';
 import JobListingCardContainer from './components/jobListingContainerComponents/JobListingCardContainer';
+import JobDetailedInformation from './components/JobDetailedInformation'
 
 function App() {
+  const [currChildFocus, setCurrChildFocus] = useState(0);
+  function handleChildFocus(key) {
+    setCurrChildFocus(key);
+  }
   return (
     <div className="App">
-      <JobListingCardContainer />
+      <JobListingCardContainer whenClicked={handleChildFocus} />
+      <JobDetailedInformation jobKey={currChildFocus}/>
     </div>
   );
 }

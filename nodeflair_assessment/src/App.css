@@ -36,29 +36,54 @@
     transform: rotate(360deg);
   }
 }
-body{
+
+body {
   background: #f1f1f1;
   padding: 15px 15px;
 }
-.cardContainer{
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+/* styling of left side job listing card and container */
+.cardGrid {
+
+  width: inherit;
+  padding: 15px 0px 0px 0px;
+  margin: 0;
+}
+
+.cardGrid:hover{
+  padding: 5px 0px 0px 0px;
+}
+.cardContainerBox{
+  flex: 3;
+}
+
+.cardContainer {
   width: fit-content;
   height: auto;
-  overflow-y: scroll;
 }
+
 .jobListingCard {
   width: 417px;
   height: fit-content;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
-  padding: 15px 5px;
+  padding: 0px 5px 10px 5px;
 }
-
+.jobListingCard:hover{
+  margin: 0px 0px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25)
+}
 .jobListingCardTopInformation {
   width: 100%;
   max-height: fit-content;
   padding: 20px;
 }
-.jobListingCardTopInformation::after{ /* horizontal line */
+.jobListingCardTopInformation::after {
+  /* horizontal line */
   content: "";
   display: block;
   position: relative;
@@ -78,14 +103,14 @@ body{
   text-align: left;
   margin: 0px 0px 2px;
 }
-.card:hover {
+/* .jobListingCard:hover {
   padding: 0px 5px auto 5px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
-.card:focus {
+.jobListingCard:focus {
   border: 1px solid #1fc76a;
-}
+} */
 .companyLogoDiv {
   display: flex;
   flex-wrap: nowrap;
@@ -176,9 +201,10 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.jobTagPara{
+.jobTagPara {
   display: block;
   width: inherit;
+  white-space: nowrap;
   padding: 5px;
   margin: 0px;
   overflow: hidden;
@@ -197,4 +223,37 @@ body{
   font-family: "Roboto Mono", Consolas, monospace;
   font-size: 14px;
   font-weight: bold;
+}
+
+/* styling for right side container of detailed job information */
+.jobDetailsContainer{
+  display: block;
+  flex: 9;
+  height: auto;
+  margin: 15px 10px;
+  padding: 29px 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* small screens */
+@media screen and (max-width: 1010px) {
+  .App{
+    flex-direction: column;
+  }
+  .jobListingCard {
+    width: 100%;
+    height: fit-content;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    padding: 0px 5px 10px 5px;
+  }
+  .cardContainerBox{
+    flex: 1;
+  }
+  .jobDetailsContainer, .detailedJobTitle{
+    display: none;
+    visibility: hidden;
+  }
 }
