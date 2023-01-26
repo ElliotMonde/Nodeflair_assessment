@@ -227,7 +227,7 @@ body {
 /* styling for right side container of detailed job information */
 .jobDetailsContainer {
   display: block;
-  flex-direction: column;
+  flex-direction: row;
   flex: 9;
   position: sticky;
   top: 5%;
