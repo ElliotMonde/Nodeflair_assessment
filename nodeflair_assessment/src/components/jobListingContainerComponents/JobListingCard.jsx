@@ -8,9 +8,9 @@ export default function JobListingCard(props) {
 
     return (
         <Grid className="cardGrid" item>
-            
-                <div className="cardLink" onClick={props.whenClicked} overlay sx={{ textDecoration: "none", color: "#000" }} >
-                <Card className="jobListingCard" sx={{borderRadius:"10px"}}>
+
+            <div className="cardLink" onClick={props.whenClicked} overlay="true" sx={{ textDecoration: "none", color: "#000" }} >
+                <Card className="jobListingCard" sx={{ borderRadius: "10px" }}>
                     <Grid container>
                         <JobListingCardTopInformation
                             item
@@ -27,7 +27,7 @@ export default function JobListingCard(props) {
                         <JobListingCardBottomInformation item jobTag={props.jobTags} />
                     </Grid>
                 </Card>
-                </div>
+            </div>
         </Grid >
     )
 }

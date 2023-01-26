@@ -13,7 +13,7 @@ function JobListingCardContainer(props) {
         document.getElementsByClassName("jobListingCard")[key].classList.add("cardOnFocus");
         setCurrFocus(key);
         props.whenClicked(key);
-        console.log(currFocus);
+        // console.log(currFocus);
     }
 
     return (

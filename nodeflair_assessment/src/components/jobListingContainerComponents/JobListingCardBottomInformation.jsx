@@ -6,14 +6,14 @@ export default function JobListingCardBottomInformation(props) {
             <p className="jobTagPara">
                 {props.jobTag.map((tag) => {
                     return (
-                        
+
                         <JobTag
                             key={props.jobTag.indexOf(tag)}
                             JobTag={tag}
                         />
                     )
                 })}
-            </p>    
+            </p>
         </div>
     )
 }

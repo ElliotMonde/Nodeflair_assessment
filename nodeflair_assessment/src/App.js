@@ -1,3 +1,4 @@
+// By Elliot Phua for Nodeflair Assessment, https://github.com/ElliotMonde
 import React, { useState } from 'react';
 import './App.css';
 import JobListingCardContainer from './components/jobListingContainerComponents/JobListingCardContainer';
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <JobListingCardContainer whenClicked={handleChildFocus} />
-      <JobDetailedInformation jobKey={currChildFocus}/>
+      <JobDetailedInformation jobKey={currChildFocus} />
     </div>
   );
 }
